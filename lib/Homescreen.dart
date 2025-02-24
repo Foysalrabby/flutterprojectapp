@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project/widget/Category.dart';
+import 'package:project/widget/Searchbar.dart';
+import 'package:project/widget/Trandingmovie.dart';
 
 class Homescreen extends StatefulWidget {
   @override
@@ -12,7 +15,7 @@ class ExtendHomescreen extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.black,
       body: Padding(
         padding: EdgeInsets.all(16),
         child: SingleChildScrollView(
@@ -43,7 +46,15 @@ class ExtendHomescreen extends State<Homescreen> {
                   ),
                 ],
               ),
+              SizedBox(height: 10,),
+              SearchWidget(),
+              CategoryWidget(),
+              SizedBox(height: 10,),
+              TrendingMovieWidget()
+
             ],
+
+
           ),
         ),
       ),
