@@ -3,7 +3,7 @@ import 'package:project/Common/utils.dart';
 import 'package:project/widget/Moviecard.dart';
 
 
-class ContinuousWatchingWidget extends StatelessWidget {
+class RecommendedMoviesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,12 +11,12 @@ class ContinuousWatchingWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Continuous Watching Title & "See More"
+          // Recommended Movies Title & "See More"
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Continuous Watching",
+                "Recommendation for You",
                 style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
               ),
               TextButton(
@@ -32,11 +32,11 @@ class ContinuousWatchingWidget extends StatelessWidget {
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: continuousWatchingMovies.length,
+              itemCount: recommendedMovies.length,
               itemBuilder: (context, index) {
                 return MovieCard(
-                  title: continuousWatchingMovies[index]["title"]!,
-                  imagePath: continuousWatchingMovies[index]["image"]!,
+                  title: recommendedMovies[index]["title"]!,
+                  imagePath: recommendedMovies[index]["image"]!,
                 );
               },
             ),

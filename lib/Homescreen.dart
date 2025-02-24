@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project/widget/Bottomnavbar.dart';
 import 'package:project/widget/Category.dart';
+import 'package:project/widget/Continus.dart';
+import 'package:project/widget/Recomendation.dart';
 import 'package:project/widget/Searchbar.dart';
 import 'package:project/widget/Trandingmovie.dart';
 
@@ -50,8 +53,13 @@ class ExtendHomescreen extends State<Homescreen> {
               SearchWidget(),
               CategoryWidget(),
               SizedBox(height: 10,),
-              TrendingMovieWidget()
-
+              TrendingMovieWidget(),
+              SizedBox(height: 10),
+              ContinuousWatchingWidget(),
+              SizedBox(height: 10),
+              RecommendedMoviesWidget(),
+              SizedBox(height: 20),
+              BottomNavBar(),
             ],
 
 
